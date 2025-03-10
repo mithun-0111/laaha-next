@@ -12,7 +12,7 @@ const intlMiddleware = createIntlMiddleware({
 
 // Middleware function
 export async function middleware(request) {
-  const acceptLanguage = request.headers.get("accept-language")
+  const acceptLanguage = request.headers.get("accept-language") || 'en'
 
   const preferredLocales = acceptLanguage
     .split(",")
