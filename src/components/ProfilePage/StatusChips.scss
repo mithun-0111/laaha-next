@@ -1,0 +1,64 @@
+$color-success: #228161;
+$color-success-50: #E4F1E2;
+$color-success-75: #EFFBF7;
+$color-gray-shade: #EAEAEA;
+$color-black-default: #363e44;
+$color-warning: #D18005;
+$color-warning-100: #FFF7EB;
+$color-danger-100: #FFEBEB;
+$color-red: #CD0000;
+
+.comment-status-wrapper,
+.ques-status-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .status-chip {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+
+  .review {
+    border: 1px solid $color-warning;
+    color: $color-warning;
+    background-color: $color-warning-100;
+  }
+
+  .published {
+    border: 1px solid $color-success;
+    color: $color-success;
+    background-color: $color-success-75;
+  }
+
+  .unpublished {
+    border: 1px solid $color-black-default;
+    color: $color-black-default;
+    background-color: $color-gray-shade;
+  }
+
+  .rejected {
+    border: 1px solid $color-red;
+    color: $color-red;
+    background-color: $color-danger-100;
+  }
+
+  .draft {
+    border: 1px solid $color-gray-shade;
+    background-color: $color-gray-shade;
+    color: $color-black-default;
+
+    .draft-button {
+      cursor: pointer;
+    }
+  }
+}

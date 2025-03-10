@@ -1,0 +1,79 @@
+@import './../../../styles/variables.scss';
+
+.subcategories {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.subcategories.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.subcategories.collapsed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.categories {
+  .cat-item.active {
+    span {
+      transform: rotate(-45deg);
+      transition: 0.2s ease all;
+      top: 1.5rem;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-inline-start: 30px;
+  }
+
+  label::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid #D8DCDE;
+    background-color: #F8F9F9;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  input[type="checkbox"]:checked+label::before {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 8px;
+    height: 5px;
+    border: solid $color-white;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease;
+  }
+
+  label {
+    margin-inline-start: 0.5rem;
+  }
+}
+
+.resource-search svg path {
+  fill: $color-primary;
+}

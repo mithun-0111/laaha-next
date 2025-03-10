@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+@import './../../styles/variables.scss';
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  &.layout_twocol_section > div,
+  &.layout_twocol > div {
+    flex: 0 0 100%;
+    
+    @media screen and (min-width: $lg) {
+      flex: 0 0 50%;
+      max-width: calc(50% - 0.75rem);
+    }
+  }
+
+  &.layout_threecol_33_34_33 > div,
+  &.layout_threecol_section > div {
+    flex: 0 0 100%;
+
+    @media screen and (min-width: $lg) {
+      max-width: calc(33.33% - 1rem);
+      flex: 0 0 33.33%;
+    }
+  }
+}
+
+.external-video {
+  >div {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  @media screen and (min-width: $tablet) {
+    iframe {
+      height: 500px !important;
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    iframe {
+      height: 670px !important;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    iframe {
+      height: 250px !important;
+    }
+  }
+}

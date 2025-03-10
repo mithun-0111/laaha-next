@@ -1,0 +1,26 @@
+.community-overlay {
+  .modal-body {
+    position: relative;
+
+    .replies-list {
+      .reaction-popup {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1rem;
+        right: -1rem;
+      }
+    }
+  }
+}
+
+.user-reply {
+  .like-button .reaction-container {
+    padding: 0;
+  }
+
+  .reaction-container .reaction-options {
+    left: 0;
+    transform: none;
+  }
+}

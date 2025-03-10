@@ -1,0 +1,37 @@
+.featured-stories {
+  background: url('/assets/images/featured-cat-stories.png') no-repeat;
+  background-size: cover;
+}
+
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  .item {
+    flex: 0 0 100%;
+    @media screen and (min-width: 768px) {
+      flex: 0 0 50%;
+      max-width: calc(50% - 0.75rem);
+    }
+
+    @media screen and (min-width: 992px) {
+      flex: 0 0 25%;
+      max-width: calc(25% - 1.125rem);
+    }
+
+    &:nth-child(-n+2) {
+      flex: 0 0 100%;
+
+      @media screen and (min-width: 768px) {
+        flex: 0 0 50%;
+        max-width: calc(50% - 0.75rem);
+      }
+
+      @media screen and (min-width: 992px) {
+        flex: 0 0 50%;
+        max-width: calc(50% - 0.75rem);
+      }
+    }
+  }
+}
